@@ -1,0 +1,25 @@
+<h2>Liste des films du studio Ghibli</h2>
+<h3>Ghibli nous enchante avec :</h3>
+<!-- 
+<ul>
+    <li *ngFor="let item of films">
+        {{item.title}} {{item.release_date}} <button class=buttonInfo (click)="toInfo(item.id)">Info</button>
+    </li>
+</ul> -->
+<table>
+    <thead>
+        <tr>
+            <th style="width: 30%">Titre</th>
+            <th style="width: 30%">Année de sortie</th>
+            <th style="width: 30%">Info</th>
+            <th style="width: 10%"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of films">
+            <td class=".cell">{{item.title}}</td>
+            <td class=".cell">{{item.release_date}}</td>
+            <td class=".cell"><button class=buttonInfo (click)="toInfo(item.id)">Info</button></td>
+        </tr>
+    </tbody>
+</table>
